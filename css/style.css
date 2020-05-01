@@ -1,3 +1,220 @@
-.banner {
-  background-image: url(../img/HelbizBanner.jpg);
+/* COMMON */
+
+/* Tag */
+body {
+  font-family: 'Open Sans', sans-serif;
 }
+section {
+  padding: 40px 0;
+}
+h1 {
+  font-size: 50px;
+  margin-bottom: 25px;
+}
+h2 {
+  font-size: 40px;
+}
+p {
+  font-size: 18px;
+  margin: 20px 0;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  font-size: 11px;
+  text-decoration: none;
+}
+/* Class */
+.stripe {
+  height: 70px;
+  line-height: 70px;
+}
+.cta {
+  font-size: 18px;
+}
+.inline-list li {
+  display: inline;
+}
+/* color */
+.white {
+  color: white;
+}
+
+/* text */
+.center {
+  text-align: center;
+}
+/* END COMMON */
+
+
+/* HEADER */
+
+/* Navigation */
+header nav a {
+  color: black;
+  padding: 10px;
+  text-transform: uppercase;
+}
+#logo {
+  padding: 0 10px;
+}
+.menu {
+  text-align: right;
+}
+.languages li {
+  border-right: 1px solid black;
+}
+.languages li:last-child {
+  border-right: none;
+}
+
+/* Hero */
+.hero {
+  height: 550px;
+  position: relative;
+  background-image: url(../img/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.slogan {
+  width: 100%;
+  padding: 0 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -50% );
+}
+/* END HEADER */
+
+/* MAIN */
+#products p {
+  font-size: 20px;
+}
+#products img {
+  width: 100%;
+}
+#products [class*="col-"]:first-child {
+  padding-right: 20px;
+}
+#products [class*="col-"]:last-child {
+  padding-left: 20px;
+}
+.item {
+  padding-top: 50px;
+  background-color: #fafafa;
+}
+/* END MAIN */
+
+/* MEDIA QUERY */
+
+/* 768px ≤ Media Query < 992px */
+@media all and ( min-width: 768px ) and ( max-width: 991px ) {
+
+  /* COMMON */
+  .container {
+    max-width: 850px;
+  }
+  section {
+    padding: 30px 0;
+  }
+  h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  p {
+    font-size: 16px;
+    margin: 15px 0;
+  }
+  .stripe {
+    height: 60px;
+    line-height: 60px;
+  }
+
+  /* HEADER */
+  .hero {
+    height: 380px;
+  }
+  .hero img {
+    width: 120px;
+  }
+
+  /* MAIN */
+  #products p {
+    font-size: 18px;
+  }
+  #products [class*="col-"]:first-child {
+    padding-right: 13px;
+  }
+  #products [class*="col-"]:last-child {
+    padding-left: 13px;
+  }
+  .item {
+    padding-top: 30px;
+  }
+}
+
+/* Media Query < 768px */
+@media all and ( max-width: 767px ) {
+
+  /* COMMON */
+  .container {
+    max-width: 650px;
+  }
+  section {
+    padding: 30px 0;
+  }
+  h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  p {
+    font-size: 13px;
+    margin: 10px 0;
+  }
+  .stripe {
+    height: 100px;
+    line-height: 50px;
+  }
+  .cta {
+    font-size: 17px;
+  }
+
+  /* HEADER */
+  header nav {
+    position: relative;
+  }
+  .languages {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .hero {
+    height: 300px;
+  }
+  .hero img {
+    width: 70px;
+  }
+  /* MAIN */
+  #products p {
+    font-size: 17px;
+  }
+  #products [class*="col-"]:first-child {
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+  #products [class*="col-"]:last-child {
+    padding-left: 0;
+  }
+  .item {
+    padding: 15px 10px 0;
+  }
+}
+/* END MEDIA QUERY */

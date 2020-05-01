@@ -161,7 +161,7 @@
   .col-md-11 {
     width: calc( ( 100% / 12 ) * 11 );
   }
-  .col-xs-12 {
+  .col-md-12 {
     width: calc( ( 100% / 12 ) * 12 );    /* NOTE: 100% */
   }
 
