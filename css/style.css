@@ -14,6 +14,13 @@ h1 {
 h2 {
   font-size: 40px;
 }
+h3 {
+  font-size: 30px;
+}
+h5 {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
 p {
   font-size: 18px;
   margin: 20px 0;
@@ -44,6 +51,10 @@ a {
 /* text */
 .center {
   text-align: center;
+}
+.smaller {
+  font-size: 10px;
+  margin: 0;
 }
 /* END COMMON */
 
@@ -89,6 +100,8 @@ header nav a {
 /* END HEADER */
 
 /* MAIN */
+
+/* Products */
 #products p {
   font-size: 20px;
 }
@@ -104,6 +117,32 @@ header nav a {
 .item {
   padding-top: 50px;
   background-color: #fafafa;
+}
+
+/* Work */
+#work {
+  height: 400px;
+  padding-top: 80px;
+  background-image: url(../img/HelbizBanner.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#work img {
+  width: 100%;
+}
+#work [class*="col-"] {
+  height: 600px;
+}
+#work [class*="lateral"] {
+  position: relative;
+}
+#work [class*="lateral"] > * {
+  position: absolute;
+  bottom: 100px;
+}
+.steps {
+  margin-bottom: 30px;
 }
 /* END MAIN */
 
@@ -126,6 +165,13 @@ header nav a {
   h2 {
     font-size: 30px;
   }
+  h3 {
+    font-size: 25px;
+  }
+  h5 {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
   p {
     font-size: 16px;
     margin: 15px 0;
@@ -144,6 +190,8 @@ header nav a {
   }
 
   /* MAIN */
+
+  /* Products */
   #products p {
     font-size: 18px;
   }
@@ -155,6 +203,27 @@ header nav a {
   }
   .item {
     padding-top: 30px;
+  }
+
+  /* Work */
+  #work {
+    height: 300px;
+    padding-top: 60px;
+  }
+  #work img {
+    width: 80%;
+  }
+  #work [class*="col-"] {
+    height: 450px;
+  }
+  #work [class*="col-"]:first-child {
+    padding-left: 10px;
+  }
+  #work [class*="lateral"] > * {
+    bottom: 60px;
+  }
+  .steps {
+    margin-bottom: 20px;
   }
 }
 
@@ -174,6 +243,13 @@ header nav a {
   }
   h2 {
     font-size: 25px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h5 {
+    font-size: 12px;
+    margin-bottom: 10px;
   }
   p {
     font-size: 13px;
@@ -203,6 +279,8 @@ header nav a {
     width: 70px;
   }
   /* MAIN */
+
+  /* Products */
   #products p {
     font-size: 17px;
   }
@@ -215,6 +293,24 @@ header nav a {
   }
   .item {
     padding: 15px 10px 0;
+  }
+
+  /* Work */
+  #work {
+    height: 200px;
+    padding-top: 40px;
+  }
+  #work [class*="col-"] {
+    height: 300px;
+  }
+  #work [class*="col-"]:first-child {
+    padding-left: 10px;
+  }
+  #work [class*="lateral"] > * {
+    bottom: 60px;
+  }
+  .steps {
+    margin-bottom: 0;
   }
 }
 /* END MEDIA QUERY */
