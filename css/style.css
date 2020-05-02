@@ -3,6 +3,7 @@
 /* Tag */
 body {
   font-family: 'Open Sans', sans-serif;
+  min-width: 1050px;
 }
 section {
   padding: 40px 0;
@@ -16,9 +17,10 @@ h2 {
 }
 h3 {
   font-size: 30px;
+  margin-bottom: 10px;
 }
 h5 {
-  font-size: 15px;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 p {
@@ -29,9 +31,13 @@ ul {
   list-style-type: none;
 }
 a {
-  font-size: 11px;
+  font-size: 12px;
   text-decoration: none;
 }
+a:hover {
+  text-decoration: underline;
+}
+
 /* Class */
 .stripe {
   height: 70px;
@@ -40,9 +46,14 @@ a {
 .cta {
   font-size: 18px;
 }
+.cta::after{
+  content: '>';
+  margin-left: 10px;
+}
 .inline-list li {
   display: inline;
 }
+
 /* color */
 .white {
   color: white;
@@ -53,7 +64,7 @@ a {
   text-align: center;
 }
 .smaller {
-  font-size: 10px;
+  font-size: 15px;
   margin: 0;
 }
 /* END COMMON */
@@ -91,7 +102,6 @@ header nav a {
 }
 .slogan {
   width: 100%;
-  padding: 0 20px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -118,11 +128,13 @@ header nav a {
   padding-top: 50px;
   background-color: #fafafa;
 }
+/* end Products */
 
 /* Work */
 #work {
   height: 400px;
   padding-top: 80px;
+  margin-bottom: 300px;
   background-image: url(../img/HelbizBanner.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -139,12 +151,125 @@ header nav a {
 }
 #work [class*="lateral"] > * {
   position: absolute;
-  bottom: 100px;
+  bottom: 120px;
 }
 .steps {
   margin-bottom: 30px;
 }
+/* end Work */
+
+/* Info */
+
+/* layout */
+#info [class*="col-"] {
+  height: 450px;
+}
+#info .container:nth-child(2) [class*="col-"]:first-child {
+  padding-right: 20px;
+  overflow: hidden;
+}
+#info .container:nth-child(2) > [class*="col-"]:last-child {
+  padding-left: 20px;
+}
+#info .container:nth-child(2) .text {
+  padding-top: 40px;
+}
+
+/* smart */
+.smart {
+  background-image: url(../img/ScooterHelbiz-2400.jpg);
+  background-size: cover;
+  margin-bottom: 40px;
+}
+.smart [class*="col-"] {
+  height: 100%;
+  position: relative;
+}
+.smart [class*="col-"] > .text {
+  width: 100%;
+  padding: 0 130px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -50% );
+}
+
+/* app */
+.app {
+  height: 100%;
+  background-image: linear-gradient(to top, #253039, #2b3944, #324250, #394b5d, #405569);
+}
+.app .os li {
+  margin-right: 10px;
+}
+.app img {
+  width: 100%;
+}
+
+/* cities */
+.cities {
+  height: 100%;
+  background-image: url(../img/Cities.jpg);
+  background-size: cover;
+}
+/* end Info */
+
+/* Social */
+#social {
+  height: 400px;
+  margin-bottom: 40px;
+  background-image: url(../img/Social-Banner.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.family {
+  padding: 50px 130px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -50% );
+}
+.family .social li {
+  margin-right: 20px;
+}
+.family .social a {
+  color: black;
+  font-size: 30px;
+}
 /* END MAIN */
+
+/* FOOTER */
+footer {
+  padding: 50px 200px;
+  background-color: black;
+}
+footer a {
+  font-size: 15px;
+}
+footer hr {
+  border-color: gray;
+}
+
+/* link */
+.link h5 {
+  margin-bottom: 20px;
+}
+.link li {
+  margin-bottom: 10px;
+}
+.link a {
+  color: gray;
+}
+
+/* About */
+#about .social li a {
+  font-size: 20px;
+  margin-right: 10px;
+}
+/* END FOOTER */
+
 
 /* MEDIA QUERY */
 
@@ -152,11 +277,8 @@ header nav a {
 @media all and ( min-width: 768px ) and ( max-width: 991px ) {
 
   /* COMMON */
-  .container {
-    max-width: 850px;
-  }
-  section {
-    padding: 30px 0;
+  body {
+    min-width: 830px;
   }
   h1 {
     font-size: 40px;
@@ -165,16 +287,8 @@ header nav a {
   h2 {
     font-size: 30px;
   }
-  h3 {
-    font-size: 25px;
-  }
-  h5 {
-    font-size: 15px;
-    margin-bottom: 10px;
-  }
-  p {
-    font-size: 16px;
-    margin: 15px 0;
+  .container {
+    max-width: 900px;
   }
   .stripe {
     height: 60px;
@@ -196,19 +310,20 @@ header nav a {
     font-size: 18px;
   }
   #products [class*="col-"]:first-child {
-    padding-right: 13px;
+    padding-right: 15px;
   }
   #products [class*="col-"]:last-child {
-    padding-left: 13px;
+    padding-left: 15px;
   }
   .item {
-    padding-top: 30px;
+    padding-top: 20px;
+    box-shadow: 5px 5px 10px #cccccc;
   }
-
   /* Work */
   #work {
-    height: 300px;
+    height: 350px;
     padding-top: 60px;
+    background-position: -100px;
   }
   #work img {
     width: 80%;
@@ -220,10 +335,55 @@ header nav a {
     padding-left: 10px;
   }
   #work [class*="lateral"] > * {
-    bottom: 60px;
+    bottom: 30px;
   }
   .steps {
     margin-bottom: 20px;
+  }
+
+  /* Info */
+  #info [class*="col-"] {
+    height: 350px;
+  }
+  #info .container:nth-child(2) [class*="col-"]:first-child {
+    padding-right: 10px;
+  }
+  #info .container:nth-child(2) > [class*="col-"]:last-child {
+    padding-left: 10px;
+  }
+  #info .container:nth-child(2) .text {
+    padding: 30px 10px;
+  }
+
+  /* smart */
+  .smart {
+    margin-bottom: 20px;
+  }
+  .smart [class*="col-"] > .text {
+    padding: 0 80px;
+  }
+
+  /* Social */
+  #social {
+    height: 350px;
+    margin-bottom: 40px;
+  }
+  .family {
+    padding: 35px 100px;
+  }
+  .family .social li {
+    margin-right: 15px;
+  }
+  /* END MAIN */
+
+  /* FOOTER */
+  footer {
+    padding: 40px 80px;
+  }
+
+  /* About */
+  #about .social li a {
+    font-size: 16px;
   }
 }
 
@@ -232,28 +392,10 @@ header nav a {
 
   /* COMMON */
   .container {
-    max-width: 650px;
+    max-width: 600px;
   }
-  section {
-    padding: 30px 0;
-  }
-  h1 {
-    font-size: 30px;
-    margin-bottom: 15px;
-  }
-  h2 {
-    font-size: 25px;
-  }
-  h3 {
-    font-size: 20px;
-  }
-  h5 {
-    font-size: 12px;
-    margin-bottom: 10px;
-  }
-  p {
-    font-size: 13px;
-    margin: 10px 0;
+  body {
+    min-width: 500px;
   }
   .stripe {
     height: 100px;
@@ -273,35 +415,47 @@ header nav a {
     right: 0;
   }
   .hero {
-    height: 300px;
+    height: 400px;
+    background-position: -100px;
+    background-size: cover;
+  }
+  .filter {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
   }
   .hero img {
-    width: 70px;
+    width: 130px;
+  }
+  .slogan {
+    padding: 0 20px;
   }
   /* MAIN */
 
   /* Products */
-  #products p {
-    font-size: 17px;
+  #products img {
+    width: 70%;
   }
   #products [class*="col-"]:first-child {
     padding-right: 0;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
   #products [class*="col-"]:last-child {
     padding-left: 0;
   }
   .item {
-    padding: 15px 10px 0;
+    padding: 15px 5px 0;
+    box-shadow: 10px 10px 20px #dddddd,
+                -10px 10px 20px #dddddd,
+                10px -10px 20px #dddddd,
+                -10px -10px 20px #dddddd;
   }
 
   /* Work */
   #work {
-    height: 200px;
-    padding-top: 40px;
+    background-position: -200px;;
   }
   #work [class*="col-"] {
-    height: 300px;
+    height: 500px;
   }
   #work [class*="col-"]:first-child {
     padding-left: 10px;
@@ -311,6 +465,63 @@ header nav a {
   }
   .steps {
     margin-bottom: 0;
+  }
+  /* Info */
+  #info [class*="col-"] {
+    height: 400px;
+  }
+  #info .container:nth-child(2) [class*="col-"]:first-child {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+  #info .container:nth-child(2) > [class*="col-"]:last-child {
+    padding-left: 0;
+  }
+  .smart {
+    background-size: 400%;
+    background-position: -650px;
+    margin-bottom: 20px;
+  }
+  .smart [class*="col-"] {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  .smart [class*="col-"] > .text {
+    padding: 0 50px;
+  }
+  .app {
+    padding: 0 50px;
+  }
+
+  /* Social */
+  #social {
+    height: 300px;
+    margin-bottom: 40px;
+  }
+  .family {
+    padding: 25px 60px;
+  }
+  .family .social li {
+    margin-right: 15px;
+  }
+  /* END MAIN */
+
+  /* FOOTER */
+  footer {
+    padding: 20px 50px;
+  }
+  footer .logo {
+    margin-bottom: 30px;
+  }
+  .link [class*="col-"] {
+    margin-bottom: 30px;
+  }
+
+  /* About */
+  #about {
+    text-align: center;
+  }
+  #about .social {
+    margin-bottom: 20px;
   }
 }
 /* END MEDIA QUERY */
